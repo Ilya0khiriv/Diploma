@@ -54,7 +54,6 @@ Here's an improved and visually appealing way to display the information with im
 
 ---
 
-By using images alongside descriptions, the content is now more engaging and easy to follow.
 
 - **Вспомогательные функции**:
   - `append_conversation`: Добавляет сообщение в базу данных.
