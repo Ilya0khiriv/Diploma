@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Messages Section -->
+        <div class="messages-container">
+            {% for message in success_message %}
+                <div class="message user-message">
+                    <strong>User:</strong> <span>{{ message.user }}</span>
+                </div>
+                <div class="message ai-message">
+                    <strong>AI:</strong> <span>{{ message.ai }}</span>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Footer with Greeting and Forms -->
+        <footer class="footer-container">
+            <header class="footer-header">
+                <h1>Hello, {{ user }}!</h1>
+                <a href="/logout" class="logout-link">Logout</a>
+            </header>
+            <form method="post" class="message-form common-form">
+                {{ form.hidden_tag() }}
+                <input type="text" id="question" name="question" maxlength="1000" required autofocus class="message-input common-input">
+                <button type="submit" class="submit-btn common-btn">Send</button>
+            </form>
+            <form method="post" class="memory-form common-form">
+                Amount of messages shown
+                {{ memory_form.hidden_tag() }}
+                <input type="text" id="amount" name="amount" maxlength="3" required class="memory-input common-input">
+                <button type="submit" class="submit-btn common-btn">Apply</button>
+            </form>
+        </footer>
+    </div>
+</body>
+</html>
