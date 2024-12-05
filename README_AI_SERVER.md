@@ -1,6 +1,6 @@
 # Сервис интеграции с ИИ с использованием Selenium и FastAPI
 
-![Description of the Image](https://post-images.org/photo-page.php?photo=4gNqGPck)
+![Description of the Image](https://post-images.org/download/194.113.153.253-desk/7VriZdmb1733416235.png)
 
 
 Этот проект демонстрирует **временную реализацию (placeholder)** сервиса, использующего FastAPI для взаимодействия с веб-интерфейсом ИИ через Selenium. Такой подход используется в качестве временного решения, пока не появится или не будет реализован прямой API-эндпоинт от ИИ-сервиса.
