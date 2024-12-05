@@ -34,11 +34,27 @@
   - `User`: Хранит данные пользователей (логин, пароль, лимит памяти для сообщений).
   - `Conversation`: Хранит сообщения пользователя и ответы ИИ, привязанные к пользователю.
 
-- **Маршруты**:
-  - `/register`: Регистрация нового пользователя.
-  - `/login`: Вход в систему.
-  - `/`: Основная защищённая страница для общения с ИИ.
-  - `/logout`: Выход из системы.
+Here's an improved and visually appealing way to display the information with images included:
+
+---
+
+### Маршруты
+
+- **`/register`**: Регистрация нового пользователя  
+  ![Регистрация](https://post-images.org/download/194.113.153.253-desk/VbPvmyfk1733416444.png)
+
+- **`/login`**: Вход в систему  
+  ![Вход](https://post-images.org/download/194.113.153.253-desk/AulVbIzZ1733416497.png)
+
+- **`/`**: Основная защищённая страница для общения с ИИ  
+  ![Главная страница](https://post-images.org/download/194.113.153.253-desk/lCUKqrND1733416556.png)  
+  ![Общение с ИИ](https://post-images.org/download/194.113.153.253-desk/YLUSg1BH1733416635.png)
+
+- **`/logout`**: Выход из системы
+
+---
+
+By using images alongside descriptions, the content is now more engaging and easy to follow.
 
 - **Вспомогательные функции**:
   - `append_conversation`: Добавляет сообщение в базу данных.
