@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.service import Service
 import threading
 
 class Chrome:
-
+    # h means headless
     def __init__(self, h=False, dir=False, custom_driver=None, user_data_dir=None):
         self.driver_path = custom_driver or os.path.abspath("chromedriver")
         self.user_data_dir = user_data_dir or (tempfile.mkdtemp() if dir else "/Users/ilya/Library/Application Support/Google/Chrome/Default")
