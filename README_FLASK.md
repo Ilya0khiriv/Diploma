@@ -46,36 +46,6 @@
 
 ---
 
-## Предварительные требования
-- Python 3.8+
-- SQLite (установлен по умолчанию с Python)
-- Необходимые Python-библиотеки:
-  - `Flask`
-  - `Flask-SQLAlchemy`
-  - `Flask-Bcrypt`
-  - `Flask-Login`
-  - `Flask-WTF`
-  - `requests`
-
----
-
-## Установка
-
-1. Клонируйте репозиторий:
-   ```bash
-   git clone <repository-url>
-   cd <repository-folder>
-   ```
-
-2. Установите зависимости:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Инициализируйте базу данных:
-   ```bash
-   python main.py
-   ```
 
 ---
 
