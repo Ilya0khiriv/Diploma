@@ -46,19 +46,28 @@ def home(request):
             user_message="Hello",
             ai_message="How can I assist you today?"
         )
+        user_conversation = Conversation.objects.filter(user_id=request.user.id).order_by("-id")
 
     amount_messages, created = AmountOfMessagesShown.objects.get_or_create(
         user_id=request.user.id
     )
 
-    num_messages_to_show = min(int(amount_messages), user_conversation.count())
+    real_amount = 1
+    try:
+        real_amount = user_conversation.count()
+    except:
+        pass
+
+    num_messages_to_show = min(int(amount_messages), real_amount)
     message_modeled = []
+
 
     for msg in user_conversation[:num_messages_to_show]:
         message_modeled.append({
             "user": msg.user_message,
             "ai": msg.ai_message
         })
+
 
     message_modeled = message_modeled[::-1]
     context = {'form': form, 'amount_form': amount_form, 'success_message': message_modeled}
@@ -107,7 +116,10 @@ def get_response(text_="", cust_sys_=""):
 
     url = f"http://0.0.0.0:{port}/translate?text={encoded_text}&cust_sys={encoded_cust_sys}"
 
-    response = requests.get(url)
+    try:
+        response = requests.get(url)
+    except:
+        return "Server is down"
 
     if response.status_code == 200:
         data = response.json()
