@@ -53,7 +53,7 @@
   ![Вход](https://post-images.org/download/194.113.153.253-desk/ZRvKLVzO1733996095.png)
 
 - **`/`**: Главная защищенная страница для взаимодействия с ИИ  
-  ![Главная страница]([https://post-images.org/download/194.113.153.253-desk/lCUKqrND1733416556.png](https://post-images.org/download/194.113.153.253-desk/VTPua7MH1733996139.png))  
+  ![Главная страница](https://post-images.org/download/194.113.153.253-desk/VTPua7MH1733996139.png))  
 
 - **`/auth/logout`**: Выход из системы
 
