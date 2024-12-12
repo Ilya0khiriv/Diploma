@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <p>Welcome, {{ username }}! <a href="/logout" class="logout-link">Logout</a></p>
+
+        <div class="messages-container">
+            {% for message in success_message %}
+                {% if message.ai %}
+                    <div class="message user-message">
+                        <strong>User:</strong> <span>{{ message.user }}</span>
+                        <span class="timestamp">{{ message.timestamp }}</span>
+                    </div>
+                    <div class="message ai-message">
+                        <strong>AI:</strong> <span>{{ message.ai }}</span>
+                        <span class="timestamp">{{ message.timestamp }}</span>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <form method="post" class="message-form" aria-label="Send a message">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+            <input type="text" id="question" name="question" maxlength="1000" required autofocus class="message-input common-input" pattern=".{1,1000}" title="Please enter a message (up to 1000 characters)." aria-label="Message input">
+            <button type="submit" class="submit-btn common-btn" aria-label="Send message">Отправить</button>
+
+        </form>
+
+        <p>Amount of messages shown.</p>
+
+        {% if error %}
+        <div class="error-message">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+
+        <form method="post" class="memory-form" aria-label="Set message amount">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="text" id="amount" name="amount" maxlength="3" required class="memory-input common-input" pattern="\d{1,3}" title="Please enter a number (up to 3 digits)." aria-label="Message amount input">
+            <button type="submit" class="submit-btn common-btn" aria-label="Apply message amount">Apply</button>
+        </form>
+
+
+    </div>
+
+</body>
+{% endblock %}
+
