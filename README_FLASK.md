@@ -34,8 +34,6 @@
   - `User`: Хранит данные пользователей (логин, пароль, лимит памяти для сообщений).
   - `Conversation`: Хранит сообщения пользователя и ответы ИИ, привязанные к пользователю.
 
-Here's an improved and visually appealing way to display the information with images included:
-
 ---
 
 ### Маршруты
