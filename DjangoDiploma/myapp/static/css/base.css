@@ -1,11 +1,9 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set body height to fill the viewport */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -14,7 +12,6 @@ body {
     margin: 0;
 }
 
-/* Main container to hold everything and allow the content to grow */
 .container {
     display: flex;
     flex-direction: column;
@@ -22,7 +19,6 @@ body {
     overflow: hidden; /* Prevent the body from scrolling */
 }
 
-/* Ensure messages container grows and is scrollable */
 .messages-container {
     overflow-y: auto; /* Allow vertical scrolling */
     flex-grow: 1; /* Let the messages container take available space */
@@ -31,7 +27,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Footer section at the bottom */
 .footer-container {
     background-color: #f1f1f1;
     padding: 10px;
@@ -40,7 +35,6 @@ body {
     position: relative;
 }
 
-/* Message box styling */
 .message {
     padding: 10px;
     margin-bottom: 10px;
@@ -60,7 +54,6 @@ body {
     display: block;
 }
 
-/* Styling for the input forms */
 .message-form {
     display: flex;
     flex-direction: column;
@@ -87,7 +80,6 @@ body {
     background-color: #45a049;
 }
 
-/* Styling for logout link */
 .logout-link {
     text-decoration: none;
     color: #333;
