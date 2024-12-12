@@ -1,11 +1,9 @@
-/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Set body height to fill the viewport */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -17,7 +15,6 @@ body {
     background-color: #f4f7fc; /* Light background color */
 }
 
-/* Main container to hold everything and allow the content to grow */
 .container {
     display: flex;
     flex-direction: column;
@@ -30,7 +27,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-/* Styling for the login title */
 .login-title {
     font-size: 24px;
     font-weight: bold;
@@ -38,12 +34,10 @@ body {
     text-align: center;
 }
 
-/* Messages container */
 .messages-container {
     margin-bottom: 20px;
 }
 
-/* Message styling */
 .message {
     padding: 10px;
     margin-bottom: 10px;
@@ -60,7 +54,6 @@ body {
     color: #721c24;
 }
 
-/* Form styling */
 .message-form {
     display: flex;
     flex-direction: column;
@@ -96,7 +89,6 @@ body {
     background-color: #45a049;
 }
 
-/* Styling for the register link */
 .register-link {
     text-align: center;
     margin-top: 20px;
@@ -112,7 +104,6 @@ body {
     color: #007BFF;
 }
 
-/* Footer */
 .footer-container {
     background-color: #f1f1f1;
     padding: 10px;
